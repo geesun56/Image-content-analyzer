@@ -59,4 +59,26 @@ function printDesc(){
 
 function analyze(){
     console.log("Analyze API!!");
+    var request = new XMLHttpRequest();
+    url = "https://api.imagga.com/v2/tags?image_url=https://imagga.com/static/images/tagging/wind-farm-538576_640.jpg"
+    
+    request.open('GET', url, true);
+    request.withCredentials = true;
+    request.setRequestHeader("Authorization", "Basic YWNjXzc3MzM0NDQxZTU3MWI1OTo1YzM4NzU0MDExOWVmMDc0ODk1Nzk5YjkzOGY3YmZiMA==");
+
+    request.onload = function() {
+        analyze_data = JSON.parse(this.response);
+    
+        if (request.status == 200) {
+            console.log(`Data loaded`);
+        }
+        else{
+            console.log(`Error occured. Status : ${request.status}`)
+        }
+
+        console.log(analyze_data)
+
+    }
+
+    request.send();
 }
