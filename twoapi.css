@@ -1,0 +1,32 @@
+#header{
+    color: white;
+}
+
+body{
+    background-color: gray;
+}
+
+.search_pics{
+    transition: background-color .5s;
+}
+.search_pics:hover{
+    opacity: 0.3;
+}
+
+#selected_image{
+    float: left;
+}
+
+#tag_prediction{
+    color: white;
+    float: left;
+}
+
+.analyze_search{
+    color: white;
+}
+
+.face_prediction{
+    color: white;
+    float: left;
+}

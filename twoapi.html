@@ -6,11 +6,29 @@
         <title>IST411: Two apis</title>
     </head>
     <body>
-        <h1>Image search engine</h1>
-        <h2>Type keywords</h2>
+        <h1 id = "header">Image search engine</h1>
+        
+        <ul id = "header">
+            <li>Type keywords in the text box and press search button to search for pictures</li>
+            <li>You can select the number of pictures you want to see</li>
+            <li>Select pictures you like to analyze</li>
+            <li>Check the radio button to configure which analysis you want to take</li>
+            <li>Image tag: Analyzes the picture content and gives a prediction of what this picture is about with possibilities</li>
+            <li>Face Detection: Detects if there is a human face in a picture and gives a prediction of people's age range, race, gender with possibilities</li>
+        </ul>
+        
+        <select name="request_size" id="request_size">
+            <option value=5>5</option>
+            <option value=10>10</option>
+            <option value=15>15</option>
+            <option value=20>20</option>
+            <option value=25>25</option>
+            <option value=30>30</option>
+        </select>
         <input type="text" id = "keyword"></input>
-        <button onclick="search();">Click</button>
+        <button onclick="search();">Search</button>
         <div id="img_space"></div>
         <script src="twoapi.js" defer></script>
+        <link rel="stylesheet" href="twoapi.css">
     </body>
 </html>
